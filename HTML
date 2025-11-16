@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ma Boutique Perso</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Ma Boutique Perso</h1>
+      <nav>
+        <button id="contact-whatsapp">Contact WhatsApp</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Mes vêtements à vendre</h2>
+      <p>Contactez-moi sur WhatsApp pour réserver.</p>
+    </section>
+
+    <section id="products" class="product-grid" aria-live="polite">
+      <!-- Produits injectés par script.js -->
+    </section>
+
+    <hr />
+
+    <section id="testimonials" class="testimonials">
+      <h3>Avis & Témoignages</h3>
+
+      <form id="testimonial-form" class="testimonial-form" aria-label="Formulaire d'avis">
+        <input type="text" id="t-name" placeholder="Ton prénom" required />
+        <textarea id="t-message" rows="3" placeholder="Ton commentaire" required></textarea>
+        <div class="rating-input">
+          <label>Note :</label>
+          <div id="t-rating" class="stars-input" data-rating="5">
+            <button type="button" data-value="1">★</button>
+            <button type="button" data-value="2">★</button>
+            <button type="button" data-value="3">★</button>
+            <button type="button" data-value="4">★</button>
+            <button type="button" data-value="5">★</button>
+          </div>
+        </div>
+        <button type="submit" class="btn">Envoyer l'avis</button>
+      </form>
+
+      <div class="rating-summary">
+        Note moyenne : <strong id="avg-rating">0.0</strong> / 5 — <span id="count-rating">0</span> avis
+      </div>
+
+      <div id="testimonials-list" class="testimonials-list">
+        <!-- Avis injectés -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal détaillé produit -->
+  <div id="product-modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button class="close" id="close-modal">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
