@@ -1,0 +1,38 @@
+:root{--max-width:1100px;--gap:16px;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+*{box-sizing:border-box}body{margin:0;color:#222;background:#fafafa}
+.container{max-width:var(--max-width);margin:0 auto;padding:20px}
+.site-header{background:#fff;border-bottom:1px solid #eee}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.logo{margin:0;font-size:1.25rem}
+.hero{padding:20px 0;text-align:center}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--gap)}
+.card{border:1px solid #e9e9e9;border-radius:8px;padding:12px;background:#fff;display:flex;flex-direction:column;min-height:340px}
+.card img{width:100%;height:220px;object-fit:cover;border-radius:6px}
+.card h4{margin:8px 0 4px;font-size:1rem}
+.card p{margin:0 0 8px;color:#666;font-size:.95rem}
+.card .price{margin-top:auto;font-weight:700}
+.row{display:flex;gap:8px;align-items:center}
+.button{display:inline-block;padding:8px 12px;border:none;border-radius:6px;cursor:pointer}
+.btn{background:#111;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+.whatsapp{background:#25D366;color:#fff;border:0;padding:8px 12px;border-radius:6px}
+.like-btn{background:none;border:0;cursor:pointer;font-size:1.1rem}
+.likes-count{margin-left:6px;font-weight:600}
+
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;z-index:30}
+.modal.hidden{display:none}
+.modal-content{background:#fff;padding:18px;width:95%;max-width:520px;border-radius:8px;position:relative}
+.close{position:absolute;top:10px;right:12px;background:none;border:0;font-size:22px;cursor:pointer}
+
+/* Testimonials */
+.testimonials{margin-top:24px}
+.testimonial-form{display:grid;gap:8px;grid-template-columns:1fr;max-width:560px}
+.testimonial-form input, .testimonial-form textarea{padding:8px;border:1px solid #ddd;border-radius:6px}
+.stars-input button{background:none;border:0;font-size:20px;cursor:pointer;padding:4px}
+.star-on{color:#f5b301}
+.testimonials-list{margin-top:12px;display:flex;flex-direction:column;gap:10px}
+.testimonial{background:#fff;padding:10px;border:1px solid #eee;border-radius:8px}
+.rating-summary{margin-top:8px;margin-bottom:8px}
+
+/* small screens */
+@media (max-width:560px){.card img{height:180px}}
